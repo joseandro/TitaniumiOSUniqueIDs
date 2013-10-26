@@ -3,6 +3,8 @@ TitaniumiOSUniqueIDs
 
 With this native iOS Titanium module you will be able to get the replacements (identifierForVendor and advertisingIdentifier) for the deprecated UDID property on iOS 7. 
 
+####getUUID
+
 ####getIdentifierForVendor
 
 Returns an alphanumeric string that uniquely identifies a device to the app’s vendor. If the app is uninstalled and reinstalled, this value will be different.

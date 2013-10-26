@@ -11,7 +11,6 @@
 
 #import <AdSupport/AdSupport.h>
 
-
 @implementation ComJoseandroUniqueidsModule
 
 #pragma mark Internal
@@ -156,5 +155,17 @@
         }
     }
     return NUMBOOL(NO);
+}
+
+/**
+ * This method simply returns the appIdentifier method's returning, defined in TiUtils by Appcelerator.
+ * It returns a string containing a UUID. 
+ * The standard format for UUIDs represented in ASCII is a string punctuated by hyphens, for example 68753A44-4D6F-1226-9C60-0050E4C00067.
+ * For more information, check:
+ * https://github.com/appcelerator/titanium_mobile/blob/master/iphone/Classes/TiUtils.m#L1732
+ */
+-(NSString *) getUUID
+{
+    return [TiUtils appIdentifier];
 }
 @end
