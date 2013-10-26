@@ -8,6 +8,7 @@ With this native iOS Titanium module you will be able to get the replacements (i
 ~~~
 var iOSUniqueID = require('com.joseandro.uniqueids');
 
+Ti.API.info("UUID : " + iOSUniqueID.getUUID);
 Ti.API.info("Identifier for vendor: " + iOSUniqueID.getIdentifierForVendor);
 Ti.API.info("Identifier for advertising: " + iOSUniqueID.getAdvertisingIdentifier);
 Ti.API.info("Is advertising tracking enabled? " + iOSUniqueID.isAdsTrackingEnabled);
@@ -17,6 +18,13 @@ Ti.API.info("Is advertising tracking enabled? " + iOSUniqueID.isAdsTrackingEnabl
 ##Methods:
 
 ####getUUID
+This method simply returns the appIdentifier method's returning, defined in TiUtils by Appcelerator.
+It returns a string containing a UUID. 
+The standard format for UUIDs represented in ASCII is a string punctuated by hyphens, for example 68753A44-4D6F-1226-9C60-0050E4C00067.
+
+For more information, check:
+https://github.com/appcelerator/titanium_mobile/blob/master/iphone/Classes/TiUtils.m#L1732
+
 
 ####getIdentifierForVendor
 
@@ -24,6 +32,7 @@ Returns an alphanumeric string that uniquely identifies a device to the app’s 
 
 Discussion:
 The value of this property is the same for apps that come from the same vendor running on the same device. A different value is returned for apps on the same device that come from different vendors, and for apps on different devices regardless of vendor. Normally, the vendor is determined by data provided by the App Store. If the app was not installed from the app store (such as when the app is still in development), the vendor is determined based on the app’s bundle ID. The bundle ID is assumed to be in reverse-DNS format, and the first two components are used to generate a vendor ID. For example, com.example.app1 and com.example.app2 would appear to have the same vendor ID.
+
 If the value is nil, wait and get the value again later. This happens, for example, after the device has been restarted but before the user has unlocked the device.
 The value in this property remains the same while the app (or another app from the same vendor) is installed on the iOS device. The value changes when the user deletes all of that vendor’s apps from the device and subsequently reinstalls one or more of them. The value can also change when installing test builds using Xcode or when installing an app on a device using ad-hoc distribution. Therefore, if your app stores the value of this property anywhere, you should gracefully handle situations where the identifier changes.
  
