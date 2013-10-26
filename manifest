@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0
+apiversion: 2
+description: This module gets the unique identifiers for iOS devices, in order to replace deprecated UDID ones.
+author: Joseandro Luiz
+license: MIT
+copyright: Joseandro Luiz
+
+
+# these should not be edited
+name: iOSUniqueIDs
+moduleid: com.joseandro.uniqueids
+guid: 026cfeca-5a2f-4590-91f7-cc4063be352f
+platform: iphone
+minsdk: 3.1.3.GA
