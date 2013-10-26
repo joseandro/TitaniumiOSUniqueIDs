@@ -1,7 +1,20 @@
 TitaniumiOSUniqueIDs
 ====================
 
-With this native iOS Titanium module you will be able to get the replacements (identifierForVendor and advertisingIdentifier) for the deprecated UDID property on iOS 7. 
+With this native iOS Titanium module you will be able to get the replacements (identifierForVendor and advertisingIdentifier) for the deprecated means of getting the UDID / Open UDID / MAC Address on iOS 7. 
+
+##Usage example:
+
+~~~
+var iOSUniqueID = require('com.joseandro.uniqueids');
+
+Ti.API.info("Identifier for vendor: " + iOSUniqueID.getIdentifierForVendor);
+Ti.API.info("Identifier for advertising: " + iOSUniqueID.getAdvertisingIdentifier);
+Ti.API.info("Is advertising tracking enabled? " + iOSUniqueID.isAdsTrackingEnabled);
+~~~
+[Check App.js](https://github.com/joseandro/TitaniumiOSUniqueIDs/tree/master/example)
+
+##Methods:
 
 ####getUUID
 
@@ -38,6 +51,3 @@ Check the value of this property before performing any advertising tracking. If 
 
 Availability:
 Available in iOS 6.0 and later.
-
-
-MIT licensed, have fun ;)
