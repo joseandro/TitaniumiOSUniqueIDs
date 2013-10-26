@@ -24,6 +24,7 @@ The standard format for UUIDs represented in ASCII is a string punctuated by hyp
 For more information, check:
 https://github.com/appcelerator/titanium_mobile/blob/master/iphone/Classes/TiUtils.m#L1732
 
+Availability: Available in iOS 6.0 and later.
 
 ####getIdentifierForVendor
 
