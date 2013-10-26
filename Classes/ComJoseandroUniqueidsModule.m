@@ -116,7 +116,7 @@
 /**
  * Returns an alphanumeric string unique to each device, used only for serving advertisements.
  * Discussion:
- * Unlike the identifierForVendor property of the UIDevice, the same value is returned to all vendors. This identifier may change—for example, if the user erases the device—so you should not cache it.
+ * Unlike the getIdentifierForVendor method returning value, the same value is returned to all vendors. This identifier may change—for example, if the user erases the device—so you should not cache it.
  * If the value is nil, wait and get the value again later. This happens, for example, after the device has been restarted but before the user has unlocked the device.
  * Availability
  * Available in iOS 6.0 and later.
