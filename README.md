@@ -1,7 +1,7 @@
 TitaniumiOSUniqueIDs
 ====================
 
-With this native iOS Titanium module you will be able to get the replacements (identifierForVendor and advertisingIdentifier) for the deprecated means of getting the UDID / Open UDID / MAC Address on iOS 7. 
+With this native iOS Titanium module you will be able to get the replacements ( UUID, identifierForVendor and advertisingIdentifier) for the deprecated means of getting the UDID / Open UDID / MAC Address on iOS 7. 
 
 ##Usage example:
 
