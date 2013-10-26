@@ -18,8 +18,7 @@ Ti.API.info("Is advertising tracking enabled? " + iOSUniqueID.isAdsTrackingEnabl
 ##Methods:
 
 ####getUUID
-This method simply returns the appIdentifier method's returning, defined in TiUtils by Appcelerator.
-It returns a string containing a UUID. 
+This method simply returns a string containing a UUID by using the appIdentifier method defined in TiUtils.h.
 The standard format for UUIDs represented in ASCII is a string punctuated by hyphens, for example 68753A44-4D6F-1226-9C60-0050E4C00067.
 
 For more information, check:
