@@ -1,7 +1,12 @@
 TitaniumiOSUniqueIDs
 ====================
 
-With this native iOS Titanium module you will be able to get the replacements (identifierForVendor and advertisingIdentifier) for the deprecated means of getting the UDID / Open UDID / MAC Address on iOS 7. 
+With this native iOS Titanium module you will be able to get the replacements ( UUID, identifierForVendor and advertisingIdentifier) for the deprecated means of getting the UDID / Open UDID / MAC Address on iOS 7. 
+
+##Get the latest compiled module :
+
+[Distribution](https://github.com/joseandro/TitaniumiOSUniqueIDs/tree/master/distribution)
+
 
 ##Usage example:
 
@@ -18,13 +23,13 @@ Ti.API.info("Is advertising tracking enabled? " + iOSUniqueID.isAdsTrackingEnabl
 ##Methods:
 
 ####getUUID
-This method simply returns the appIdentifier method's returning, defined in TiUtils by Appcelerator.
-It returns a string containing a UUID. 
+This method simply returns a string containing a UUID by using the appIdentifier method defined in TiUtils.h.
 The standard format for UUIDs represented in ASCII is a string punctuated by hyphens, for example 68753A44-4D6F-1226-9C60-0050E4C00067.
 
 For more information, check:
 https://github.com/appcelerator/titanium_mobile/blob/master/iphone/Classes/TiUtils.m#L1732
 
+Availability: Available in iOS 6.0 and later.
 
 ####getIdentifierForVendor
 
