@@ -1,7 +1,7 @@
 /**
  * Author: Joseandro Luiz
  * Contact: joseandro . luiz at gmail . com
- * 
+ *
  * Licensed under the MIT License
  */
 #import "ComJoseandroUniqueidsModule.h"
@@ -9,7 +9,10 @@
 #import "TiHost.h"
 #import "TiUtils.h"
 
+#import <Security/Security.h>
 #import <AdSupport/AdSupport.h>
+
+#import "KeychainItemWrapper.h"
 
 @implementation ComJoseandroUniqueidsModule
 
@@ -48,7 +51,7 @@
 	[super shutdown:sender];
 }
 
-#pragma mark Cleanup 
+#pragma mark Cleanup
 
 -(void)dealloc
 {
@@ -71,7 +74,7 @@
 {
 	if (count == 1 && [type isEqualToString:@"my_event"])
 	{
-		// the first (of potentially many) listener is being added 
+		// the first (of potentially many) listener is being added
 		// for event named 'my_event'
 	}
 }
@@ -128,7 +131,7 @@
         id identifierManager = [ASIdentifierManagerClass sharedManager];
         if ([ASIdentifierManagerClass instancesRespondToSelector:@selector(advertisingIdentifier)]) {
             id adID = [identifierManager performSelector:@selector(advertisingIdentifier)];
-                return [adID performSelector:@selector(UUIDString)]; // you can use this sUDID as an alternative to UDID
+            return [adID performSelector:@selector(UUIDString)]; // you can use this sUDID as an alternative to UDID
         }
     }
     return @"";
@@ -158,14 +161,59 @@
 }
 
 /**
- * This method simply returns the appIdentifier method's returning, defined in TiUtils by Appcelerator.
- * It returns a string containing a UUID. 
- * The standard format for UUIDs represented in ASCII is a string punctuated by hyphens, for example 68753A44-4D6F-1226-9C60-0050E4C00067.
- * For more information, check:
- * https://github.com/appcelerator/titanium_mobile/blob/master/iphone/Classes/TiUtils.m#L1732
+ * This method returns the UUID and add it to the user's keychain.
+ * By using the keychain the UUID can be retrieved even if the system is rebooted or formatted.
+ *
+ * The standard format for UUIDs represented in ASCII is a string punctuated by hyphens, for example:
+ * 68753A44-4D6F-1226-9C60-0050E4C00067.
+ *
+ * This method also avoids the Keychain UUID's entry to be used in other devices within the same iCloud account, turning it into unique even across the devices from the same user.
+ *
  */
 -(NSString *) getUUID
 {
-    return [TiUtils appIdentifier];
+    KeychainItemWrapper* keychain = [[KeychainItemWrapper alloc] initWithIdentifier:@"com.joseandro.UUID"  accessGroup:nil];
+    
+    NSString* UUID = [keychain objectForKey:(kSecValueData)];
+    
+    if ( UUID == nil ||
+        ( [UUID isKindOfClass:[NSString class]] && [UUID isEqualToString:@""] ) ){
+        
+        NSLog(@"[INFO] Keychain entry is empty, setting up a new one");
+        
+        CFUUIDRef theUUID = CFUUIDCreate(NULL);
+        CFStringRef string = CFUUIDCreateString(NULL, theUUID);
+        CFRelease(theUUID);
+        
+        UUID = [(NSString *)string autorelease];
+        NSLog(@"[INFO] New UUID retrieved: %@", UUID);
+        
+        /* As per:
+            http://useyourloaf.com/blog/2010/04/28/keychain-duplicate-item-when-adding-password.html
+
+            "In database terms you could think of their being a unique index on the two attributes
+            kSecAttrAccount, kSecAttrService requiring the combination of those two attributes to be unique
+            for each entry in the keychain."
+         */
+         
+        [keychain setObject:@"UNIQUE_IDS_SERVICE" forKey:kSecAttrService];
+        [keychain setObject:@"DeviceUUID" forKey:kSecAttrAccount];
+        [keychain setObject:UUID forKey:kSecValueData];
+
+        //Make it last through device's system rebooting  and formating :)
+        [keychain setObject:kSecAttrAccessibleAlwaysThisDeviceOnly forKey:kSecAttrAccessible];
+        
+        [keychain release];
+        keychain = nil;
+        
+        NSLog(@"[INFO] Keychain entry successfully added");
+        return UUID;
+    }
+    
+    [keychain release];
+    keychain = nil;
+    
+    NSLog(@"[INFO] Keychain was reused :)");
+    return UUID;
 }
 @end

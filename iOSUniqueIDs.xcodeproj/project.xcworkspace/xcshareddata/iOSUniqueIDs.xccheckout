@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4FD77886-99A0-448A-AB91-433365A2D488</string>
+	<key>IDESourceControlProjectName</key>
+	<string>iOSUniqueIDs</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>85D91B9E-23BF-4897-8E20-CB9578AB617B</key>
+		<string>https://github.com/joseandro/TitaniumiOSUniqueIDs.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOSUniqueIDs.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>85D91B9E-23BF-4897-8E20-CB9578AB617B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/joseandro/TitaniumiOSUniqueIDs.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>85D91B9E-23BF-4897-8E20-CB9578AB617B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>85D91B9E-23BF-4897-8E20-CB9578AB617B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOSUniqueIDs</string>
+		</dict>
+	</array>
+</dict>
+</plist>

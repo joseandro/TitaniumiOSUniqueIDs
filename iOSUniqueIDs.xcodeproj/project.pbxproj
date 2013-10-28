@@ -26,6 +26,11 @@
 		24DD6CFA1134B3F500162E58 /* ComJoseandroUniqueidsModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD6CF81134B3F500162E58 /* ComJoseandroUniqueidsModule.m */; };
 		24DE9E1111C5FE74003F90F6 /* ComJoseandroUniqueidsModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DE9E0F11C5FE74003F90F6 /* ComJoseandroUniqueidsModuleAssets.h */; };
 		24DE9E1211C5FE74003F90F6 /* ComJoseandroUniqueidsModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* ComJoseandroUniqueidsModuleAssets.m */; };
+		52D2F315181E2669000AEE04 /* KeychainItemWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 52D2F313181E2669000AEE04 /* KeychainItemWrapper.h */; };
+		52D2F316181E2669000AEE04 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D2F314181E2669000AEE04 /* KeychainItemWrapper.m */; };
+		52D2F318181E26A1000AEE04 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D2F317181E26A1000AEE04 /* Security.framework */; };
+		52D2F31A181E26A6000AEE04 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D2F319181E26A6000AEE04 /* AdSupport.framework */; };
+		52D2F31C181E26B9000AEE04 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D2F31B181E26B9000AEE04 /* UIKit.framework */; };
 		AA747D9F0F9514B9006C5449 /* ComJoseandroUniqueids_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ComJoseandroUniqueids_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -36,19 +41,24 @@
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = "iOSUniqueIDs";
+			remoteInfo = iOSUniqueIDs;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		24DD6CF71134B3F500162E58 /* ComJoseandroUniqueidsModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ComJoseandroUniqueidsModule.h"; path = "Classes/ComJoseandroUniqueidsModule.h"; sourceTree = "<group>"; };
-		24DD6CF81134B3F500162E58 /* ComJoseandroUniqueidsModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ComJoseandroUniqueidsModule.m"; path = "Classes/ComJoseandroUniqueidsModule.m"; sourceTree = "<group>"; };
+		24DD6CF71134B3F500162E58 /* ComJoseandroUniqueidsModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComJoseandroUniqueidsModule.h; path = Classes/ComJoseandroUniqueidsModule.h; sourceTree = "<group>"; };
+		24DD6CF81134B3F500162E58 /* ComJoseandroUniqueidsModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComJoseandroUniqueidsModule.m; path = Classes/ComJoseandroUniqueidsModule.m; sourceTree = "<group>"; };
 		24DD6D1B1134B66800162E58 /* titanium.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = titanium.xcconfig; sourceTree = "<group>"; };
-		24DE9E0F11C5FE74003F90F6 /* ComJoseandroUniqueidsModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ComJoseandroUniqueidsModuleAssets.h"; path = "Classes/ComJoseandroUniqueidsModuleAssets.h"; sourceTree = "<group>"; };
-		24DE9E1011C5FE74003F90F6 /* ComJoseandroUniqueidsModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ComJoseandroUniqueidsModuleAssets.m"; path = "Classes/ComJoseandroUniqueidsModuleAssets.m"; sourceTree = "<group>"; };
-		AA747D9E0F9514B9006C5449 /* ComJoseandroUniqueids_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ComJoseandroUniqueids_Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		24DE9E0F11C5FE74003F90F6 /* ComJoseandroUniqueidsModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComJoseandroUniqueidsModuleAssets.h; path = Classes/ComJoseandroUniqueidsModuleAssets.h; sourceTree = "<group>"; };
+		24DE9E1011C5FE74003F90F6 /* ComJoseandroUniqueidsModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComJoseandroUniqueidsModuleAssets.m; path = Classes/ComJoseandroUniqueidsModuleAssets.m; sourceTree = "<group>"; };
+		52D2F313181E2669000AEE04 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeychainItemWrapper.h; path = Classes/KeychainItemWrapper.h; sourceTree = "<group>"; };
+		52D2F314181E2669000AEE04 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeychainItemWrapper.m; path = Classes/KeychainItemWrapper.m; sourceTree = "<group>"; };
+		52D2F317181E26A1000AEE04 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		52D2F319181E26A6000AEE04 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		52D2F31B181E26B9000AEE04 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AA747D9E0F9514B9006C5449 /* ComJoseandroUniqueids_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComJoseandroUniqueids_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D2AAC07E0554694100DB518D /* libComJoseandroUniqueids.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libComJoseandroUniqueids.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2AAC07E0554694100DB518D /* libComJoseandroUniqueids.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libComJoseandroUniqueids.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52D2F31C181E26B9000AEE04 /* UIKit.framework in Frameworks */,
+				52D2F31A181E26A6000AEE04 /* AdSupport.framework in Frameworks */,
+				52D2F318181E26A1000AEE04 /* Security.framework in Frameworks */,
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,12 +92,15 @@
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
 			);
-			name = "iOSUniqueIDs";
+			name = iOSUniqueIDs;
 			sourceTree = "<group>";
 		};
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52D2F31B181E26B9000AEE04 /* UIKit.framework */,
+				52D2F319181E26A6000AEE04 /* AdSupport.framework */,
+				52D2F317181E26A1000AEE04 /* Security.framework */,
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -93,6 +109,8 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				52D2F313181E2669000AEE04 /* KeychainItemWrapper.h */,
+				52D2F314181E2669000AEE04 /* KeychainItemWrapper.m */,
 				24DE9E0F11C5FE74003F90F6 /* ComJoseandroUniqueidsModuleAssets.h */,
 				24DE9E1011C5FE74003F90F6 /* ComJoseandroUniqueidsModuleAssets.m */,
 				24DD6CF71134B3F500162E58 /* ComJoseandroUniqueidsModule.h */,
@@ -120,6 +138,7 @@
 				AA747D9F0F9514B9006C5449 /* ComJoseandroUniqueids_Prefix.pch in Headers */,
 				24DD6CF91134B3F500162E58 /* ComJoseandroUniqueidsModule.h in Headers */,
 				24DE9E1111C5FE74003F90F6 /* ComJoseandroUniqueidsModuleAssets.h in Headers */,
+				52D2F315181E2669000AEE04 /* KeychainItemWrapper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +157,8 @@
 			);
 			dependencies = (
 			);
-			name = "iOSUniqueIDs";
-			productName = "iOSUniqueIDs";
+			name = iOSUniqueIDs;
+			productName = iOSUniqueIDs;
 			productReference = D2AAC07E0554694100DB518D /* libComJoseandroUniqueids.a */;
 			productType = "com.apple.product-type.library.static";
 		};
@@ -148,6 +167,8 @@
 /* Begin PBXProject section */
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "iOSUniqueIDs" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -192,6 +213,7 @@
 			files = (
 				24DD6CFA1134B3F500162E58 /* ComJoseandroUniqueidsModule.m in Sources */,
 				24DE9E1211C5FE74003F90F6 /* ComJoseandroUniqueidsModuleAssets.m in Sources */,
+				52D2F316181E2669000AEE04 /* KeychainItemWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,11 +234,11 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DSTROOT = "/tmp/ComJoseandroUniqueids.dst";
+				DSTROOT = /tmp/ComJoseandroUniqueids.dst;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ComJoseandroUniqueids_Prefix.pch";
+				GCC_PREFIX_HEADER = ComJoseandroUniqueids_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = "";
@@ -235,7 +257,7 @@
 					"-DTI_POST_1_2",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "ComJoseandroUniqueids";
+				PRODUCT_NAME = ComJoseandroUniqueids;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				RUN_CLANG_STATIC_ANALYZER = NO;
@@ -249,11 +271,11 @@
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				DSTROOT = "/tmp/ComJoseandroUniqueids.dst";
+				DSTROOT = /tmp/ComJoseandroUniqueids.dst;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ComJoseandroUniqueids_Prefix.pch";
+				GCC_PREFIX_HEADER = ComJoseandroUniqueids_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = "";
@@ -270,7 +292,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "-DTI_POST_1_2";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "ComJoseandroUniqueids";
+				PRODUCT_NAME = ComJoseandroUniqueids;
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -283,11 +305,11 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DSTROOT = "/tmp/ComJoseandroUniqueids.dst";
+				DSTROOT = /tmp/ComJoseandroUniqueids.dst;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ComJoseandroUniqueids_Prefix.pch";
+				GCC_PREFIX_HEADER = ComJoseandroUniqueids_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = "";
@@ -305,7 +327,7 @@
 					"-DTI_POST_1_2",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "ComJoseandroUniqueids";
+				PRODUCT_NAME = ComJoseandroUniqueids;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				RUN_CLANG_STATIC_ANALYZER = NO;
@@ -319,11 +341,11 @@
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				DSTROOT = "/tmp/ComJoseandroUniqueids.dst";
+				DSTROOT = /tmp/ComJoseandroUniqueids.dst;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ComJoseandroUniqueids_Prefix.pch";
+				GCC_PREFIX_HEADER = ComJoseandroUniqueids_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = "";
@@ -339,7 +361,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DTI_POST_1_2";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "ComJoseandroUniqueids";
+				PRODUCT_NAME = ComJoseandroUniqueids;
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "";

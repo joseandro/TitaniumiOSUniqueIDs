@@ -8,9 +8,12 @@
 // 
 
 //
-// How to add a Framework (example)
+// Frameworks include
 //
-// OTHER_LDFLAGS=$(inherited) -framework Foo
+OTHER_LDFLAGS=$(inherited) -framework Security
+OTHER_LDFLAGS=$(inherited) -framework AdSupport
+OTHER_LDFLAGS=$(inherited) -framework UIKit
+
 //
 // Adding a framework for a specific version(s) of iPhone:
 //
