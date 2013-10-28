@@ -23,11 +23,13 @@ Ti.API.info("Is advertising tracking enabled? " + iOSUniqueID.isAdsTrackingEnabl
 ##Methods:
 
 ####getUUID
-This method simply returns a string containing a UUID by using the appIdentifier method defined in TiUtils.h.
-The standard format for UUIDs represented in ASCII is a string punctuated by hyphens, for example 68753A44-4D6F-1226-9C60-0050E4C00067.
+This method returns the UUID and add it to the user's keychain.
+By using the keychain the UUID can be retrieved even if the system is rebooted or formatted.
 
-For more information, check:
-https://github.com/appcelerator/titanium_mobile/blob/master/iphone/Classes/TiUtils.m#L1732
+The standard format for UUIDs represented in ASCII is a string punctuated by hyphens, for example:
+68753A44-4D6F-1226-9C60-0050E4C00067.
+
+This method also avoids the Keychain UUID's entry to be used in other devices within the same iCloud account, turning it into unique even across the devices from the same user.
 
 Availability: Available in iOS 6.0 and later.
 
