@@ -200,7 +200,7 @@
         [keychain setObject:@"DeviceUUID" forKey:kSecAttrAccount];
         [keychain setObject:UUID forKey:kSecValueData];
 
-        //Make it last through device's system rebooting  and formating :)
+        //Make it last through uniquely in this device even after the app's deleted, system rebooted  and formated :)
         [keychain setObject:kSecAttrAccessibleAlwaysThisDeviceOnly forKey:kSecAttrAccessible];
         
         [keychain release];
