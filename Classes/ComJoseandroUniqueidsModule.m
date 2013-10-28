@@ -200,7 +200,8 @@
         [keychain setObject:@"DeviceUUID" forKey:kSecAttrAccount];
         [keychain setObject:UUID forKey:kSecValueData];
 
-        //Make it last through uniquely in this device even after the app's deleted, system rebooted  and formated :)
+        // Make it last uniquely on this device (due iCloud, the same user could have many differents devices operating with the same keychain) 
+        // even after the app's deleted, system rebooted  and formated :)
         [keychain setObject:kSecAttrAccessibleAlwaysThisDeviceOnly forKey:kSecAttrAccessible];
         
         [keychain release];
