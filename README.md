@@ -67,3 +67,7 @@ Check the value of this property before performing any advertising tracking. If 
 
 Availability:
 Available in iOS 6.0 and later.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/joseandro/titaniumiosuniqueids/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
